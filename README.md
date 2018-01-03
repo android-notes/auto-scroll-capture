@@ -3,6 +3,12 @@
 >> 很久之前写过一篇完全不同于其他长截屏方案的的博客，不过很仓促，现在重新整理一下  [android长截屏beta1](http://blog.csdn.net/qingchunweiliang/article/details/52248643)
  
 
+#### miui自动滚动长截屏效果
+
+![miui](https://github.com/android-notes/auto-scroll-capture/blob/master/miui_screen_cap.gif?raw=true)
+
+
+
 #### 画
 
 * 给滚动控件外面嵌套一个`FrameLayout`（`LinearLayout`等也可以）
