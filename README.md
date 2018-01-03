@@ -65,17 +65,18 @@ container.draw(canvas);
  
  listview不嵌套时，不管是否滚动，都能得到正确的结果
  
- ![listview](https://github.com/android-notes/auto-scroll-capture/blob/master/listview_capture.png?raw=true)
+ ![listview](https://github.com/android-notes/auto-scroll-capture/blob/master/listview_capture.jpg?raw=true)
  
  
  但scrollview滚动后即使顶部的已经看不到了，但调用scrollview的draw时还是会把scrollview不可见的地方画进去
- ![scrollview](https://github.com/android-notes/auto-scroll-capture/blob/master/scrollview_capture.png?raw=true)
+ ![scrollview](https://github.com/android-notes/auto-scroll-capture/blob/master/scrollview_capture.jpg?raw=true)
  
  为了通用起间，我们给view外面嵌套了一层view
  
  #### 代码实现
  
  关键逻辑如下，但有些细节还需要具体对待
+ 
  ```java
  
   private void autoScroll() {
