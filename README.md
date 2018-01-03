@@ -1,6 +1,6 @@
 ### 跟miui一样的自动滚动截屏
 
->> 很久之前写过一篇完全不同于其他长截屏方案的的博客，不过很仓促，现在重新整理一下  [android长截屏beta1](http://blog.csdn.net/qingchunweiliang/article/details/52248643)
+> 很久之前写过一篇完全不同于其他长截屏方案的的博客，不过很仓促，现在重新整理一下  [android长截屏beta1](http://blog.csdn.net/qingchunweiliang/article/details/52248643)
  
 
 #### miui自动滚动长截屏效果
@@ -20,7 +20,7 @@ Canvas canvas = new Canvas(bitmap);
 container.draw(canvas);
  
  ```
- >> 具体参考  `DrawScrollViewAct` `DrawListViewAct`
+ > 具体参考  `DrawScrollViewAct` `DrawListViewAct`
  
  
 #### 滚
@@ -54,7 +54,7 @@ container.draw(canvas);
 
 ```
 
- >> 参考 ScrollAct
+ > 参考 ScrollAct
 
 自动滚动效果
 ![自动滚动](https://github.com/android-notes/auto-scroll-capture/blob/master/auto_scroll.gif?raw=true) 
@@ -64,7 +64,7 @@ container.draw(canvas);
  
  * 每自动滚动完一屏幕调用`view.draw()`把`view`画到`bitmap`上，最后拼接bitmap
 
- >> 参考 `AutoScreenShotsAct`
+ > 参考 `AutoScreenShotsAct`
  
  
  #### 为什么要嵌套一层view
