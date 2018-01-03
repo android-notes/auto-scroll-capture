@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Scroll screen shots</string>
+    <string name="tips">自动滚动截屏\n基本原理\n1.画\n2.滚\n实现跟miui一样的自动滚动长截屏效果</string>
+</resources>

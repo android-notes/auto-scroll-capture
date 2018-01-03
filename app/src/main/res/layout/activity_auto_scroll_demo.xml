@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始自动滚动" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="120dp"
+
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"></ListView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#3000"
+                android:text="ListView滚动截屏"
+                android:textColor="#000" />
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:background="#e1e1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>
