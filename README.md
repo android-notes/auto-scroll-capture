@@ -1,6 +1,6 @@
 ### 跟miui一样的自动滚动截屏
 
->> 很久之前写过一篇长截屏的博客，不过很仓促，现在重新整理一下，绝对是你从没见过的长截屏方式  [android长截屏beta1](http://blog.csdn.net/qingchunweiliang/article/details/52248643)
+>> 很久之前写过一篇完全不同于其他长截屏方案的的博客，不过很仓促，现在重新整理一下  [android长截屏beta1](http://blog.csdn.net/qingchunweiliang/article/details/52248643)
  
 
 #### 画
@@ -9,7 +9,7 @@
 * 手动调用`FrameLayout`的`draw`方法把`view`画到`bitmap`上
 
  ```java
-   Bitmap bitmap = Bitmap.createBitmap(container.getWidth(), container.getHeight(), Bitmap.Config.ARGB_8888);
+Bitmap bitmap = Bitmap.createBitmap(container.getWidth(), container.getHeight(), Bitmap.Config.ARGB_8888);
 Canvas canvas = new Canvas(bitmap);
 container.draw(canvas);
  
@@ -169,7 +169,8 @@ container.draw(canvas);
         for (Bitmap bitmap : bitmaps) {
             h += bitmap.getHeight();
         }
-        Bitmap bitmap = Bitmap.createBitmap(container.getWidth(), h, Bitmap.Config.RGB_565);
+        //如果你需要透明度或者对图片质量要求很高的话请使用Config.ARGB_8888
+        Bitmap bitmap = Bitmap.createBitmap(container.getWidth(), h, Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(bitmap);
         for (Bitmap b : bitmaps) {
             canvas.drawBitmap(b, 0, 0, null);
@@ -200,9 +201,37 @@ container.draw(canvas);
  ```
  #### 最终效果
  
- 左边是自动滚动的Listview，右边是停止截屏后的bitmap
+ 左边是自动滚动的Listview，右边是停止截屏后的bitmap，可以看到完全没有拼接痕迹
+ 
+ 
  ![效果](https://github.com/android-notes/auto-scroll-capture/blob/master/auto_cap_demo.gif?raw=true)
  
  
  
+ 
+ ```txt
+ MIT License
+
+Copyright (c) 2018 wanjian
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+ 
+ ```
  
